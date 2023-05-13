@@ -1,0 +1,12 @@
+TextureRect
+VBoxContainer
+PanelContainer
+VSeparator
+Label
+TextEdit
+Button
+HBoxContainer
+Sprite2D
+Node2D
+Container
+Control

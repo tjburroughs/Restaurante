@@ -1,0 +1,6 @@
+res://mainscreen.tscn
+res://manager.gd
+res://RevealButton.gd
+res://HiddenInfoManager.gd
+res://order.gd
+res://order.tscn
