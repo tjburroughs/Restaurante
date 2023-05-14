@@ -1,11 +1,15 @@
 2a60927148abd1d33b818b535e306557
-::res://::1683969649
+::res://::1684064200
 Button or something.gd::GDScript::-1::1683750191::0::1::::<>Button<>::
 button_or_something.tscn::PackedScene::4515899759233310770::1683763213::0::1::::<><>::res://Button or something.gd
+HiddenInfoManager.gd::GDScript::-1::1683988727::0::1::::<>TextureRect<>::
 icon.svg::CompressedTexture2D::6895042119581391171::1683706318::1683706330::1::::<><>::
-mainscreen.tscn::PackedScene::5458558072631267728::1683763210::0::1::::<><>::res://PantryButton.gd<>uid://c5ialo2fsx0e6<>res://manager.gd<>uid://b5lshd5q2ftxa<>res://Pantry Menu.gd
-manager.gd::GDScript::-1::1683750474::0::1::::<>Node2D<>::
+mainscreen.tscn::PackedScene::5458558072631267728::1684007270::0::1::::<><>::res://PantryButton.gd<>uid://c5ialo2fsx0e6<>res://manager.gd<>uid://b5lshd5q2ftxa<>res://Pantry Menu.gd<>res://RevealButton.gd<>res://HiddenInfoManager.gd
+manager.gd::GDScript::-1::1684007270::0::1::::<>Node2D<>::
+order.gd::GDScript::-1::1684007271::0::1::::Order<>Node2D<>::
+order.tscn::PackedScene::5286289152345657995::1684007218::0::1::::<><>::res://order.gd
 Pantry Menu.gd::GDScript::-1::1683726716::0::1::::<>PanelContainer<>::
 PantryButton.gd::GDScript::-1::1683726716::0::1::::<>Button<>::
 PantryMenuNode.gd::GDScript::-1::1683726573::0::1::::<>Node2D<>::
+RevealButton.gd::GDScript::-1::1684006767::0::1::::<>Button<>::
 The Cram Plan.txt::TextFile::-1::1683932686::0::1::::<><>::
