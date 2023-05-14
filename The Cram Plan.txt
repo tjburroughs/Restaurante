@@ -1,0 +1,30 @@
+Sat
+9am - 11am
+Foreach Loop connecting the Add Ingredient Buttons
+Chef UI
+12pm - 2pm
+Hidden Information + Reveal Button
+[FREE SPACE]
+3pm - 5pm
+Money + Time Stats
+Signals that change Money and Time Values
+6pm - 7pm
+Money + Time UI Elements
+[FREE SPACE]
+8pm - 10pm
+Food Order Generation
+
+Sun
+9am - 11am
+Food Order Generation Function
+Food Order Acceptance Function
+12pm - 2pm
+Food Order Acceptance Function
+Finalise UI
+3pm - 5pm
+Add Art Assets
+[FREE SPACE]
+6pm - 7pm
+Find Music
+8pm - 11pm
+Finishing Touches

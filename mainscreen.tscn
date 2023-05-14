@@ -1,0 +1,166 @@
+[gd_scene load_steps=12 format=3 uid="uid://cj1fwh75fn26o"]
+
+[ext_resource type="Script" path="res://PantryButton.gd" id="1_tybq5"]
+[ext_resource type="Texture2D" uid="uid://c5ialo2fsx0e6" path="res://icon.svg" id="1_ud7n0"]
+[ext_resource type="Script" path="res://manager.gd" id="1_vaty0"]
+[ext_resource type="PackedScene" uid="uid://b5lshd5q2ftxa" path="res://button_or_something.tscn" id="2_42lxu"]
+[ext_resource type="Script" path="res://Pantry Menu.gd" id="3_q3n1c"]
+[ext_resource type="Script" path="res://RevealButton.gd" id="6_qn2o0"]
+[ext_resource type="Script" path="res://HiddenInfoManager.gd" id="7_50qlj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vftb3"]
+
+[sub_resource type="Theme" id="Theme_ng76u"]
+PanelContainer/styles/panel = SubResource("StyleBoxEmpty_vftb3")
+VSeparator/styles/separator = null
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ocu2w"]
+
+[sub_resource type="Theme" id="Theme_4f8dc"]
+PanelContainer/styles/panel = SubResource("StyleBoxEmpty_ocu2w")
+
+[node name="mainscreenManager" type="Node2D"]
+script = ExtResource("1_vaty0")
+
+[node name="Control" type="PanelContainer" parent="."]
+offset_left = 25.0
+offset_top = 300.0
+offset_right = 1122.0
+offset_bottom = 438.0
+theme = SubResource("Theme_ng76u")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="PantryButton" type="Button" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Pantry Menu"
+icon = ExtResource("1_ud7n0")
+script = ExtResource("1_tybq5")
+
+[node name="VSeparator" type="VSeparator" parent="Control/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="ChefButton" type="Button" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Chef Status Menu"
+
+[node name="VSeparator2" type="VSeparator" parent="Control/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Y'know, orders and stuff"
+
+[node name="PantryMenuNode" type="Node2D" parent="."]
+position = Vector2(15, 64)
+
+[node name="Pantry Menu" type="PanelContainer" parent="PantryMenuNode"]
+offset_right = 1036.0
+offset_bottom = 523.0
+script = ExtResource("3_q3n1c")
+
+[node name="Button or something" parent="PantryMenuNode/Pantry Menu" instance=ExtResource("2_42lxu")]
+layout_mode = 2
+sweet = Vector2(12, 0)
+
+[node name="Button or something2" parent="PantryMenuNode/Pantry Menu" instance=ExtResource("2_42lxu")]
+layout_mode = 2
+sweet = Vector2(12, 0)
+
+[node name="Button or something3" parent="PantryMenuNode/Pantry Menu" instance=ExtResource("2_42lxu")]
+layout_mode = 2
+sweet = Vector2(12, 0)
+
+[node name="Button or something4" parent="PantryMenuNode/Pantry Menu" instance=ExtResource("2_42lxu")]
+layout_mode = 2
+sweet = Vector2(12, 0)
+
+[node name="ChefMenuNode" type="Node2D" parent="."]
+position = Vector2(15, 64)
+
+[node name="Chef Menu" type="PanelContainer" parent="ChefMenuNode"]
+visible = false
+offset_right = 1036.0
+offset_bottom = 523.0
+
+[node name="StatsPicture" type="HBoxContainer" parent="ChefMenuNode/Chef Menu"]
+layout_mode = 2
+
+[node name="Stats" type="VBoxContainer" parent="ChefMenuNode/Chef Menu/StatsPicture"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="HBoxContainer" parent="ChefMenuNode/Chef Menu/StatsPicture/Stats"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="ChefMenuNode/Chef Menu/StatsPicture/Stats/Name"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ChefMenuNode/Chef Menu/StatsPicture/Stats/Name"]
+layout_mode = 2
+text = "Huh???????????"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sweet" type="HBoxContainer" parent="ChefMenuNode/Chef Menu/StatsPicture/Stats"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ChefMenuNode/Chef Menu/StatsPicture/Stats/Sweet"]
+layout_mode = 2
+text = "Sweet"
+
+[node name="RevealSweet" type="Button" parent="ChefMenuNode/Chef Menu/StatsPicture/Stats/Sweet"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "reveal"
+script = ExtResource("6_qn2o0")
+
+[node name="Sour" type="HBoxContainer" parent="ChefMenuNode/Chef Menu/StatsPicture/Stats"]
+layout_mode = 2
+
+[node name="Salty" type="HBoxContainer" parent="ChefMenuNode/Chef Menu/StatsPicture/Stats"]
+layout_mode = 2
+
+[node name="Spicy" type="HBoxContainer" parent="ChefMenuNode/Chef Menu/StatsPicture/Stats"]
+layout_mode = 2
+
+[node name="Umami" type="HBoxContainer" parent="ChefMenuNode/Chef Menu/StatsPicture/Stats"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ChefMenuNode/Chef Menu/StatsPicture"]
+layout_mode = 2
+texture = ExtResource("1_ud7n0")
+expand_mode = 2
+
+[node name="Chef Hidden Info" type="PanelContainer" parent="ChefMenuNode"]
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 518.0
+offset_bottom = 473.0
+theme = SubResource("Theme_4f8dc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ChefMenuNode/Chef Hidden Info"]
+layout_mode = 2
+
+[node name="SweetStat" type="TextureRect" parent="ChefMenuNode/Chef Hidden Info/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+script = ExtResource("7_50qlj")
+buttonConnect = "/Sweet/RevealSweet"
+
+[connection signal="become_visible" from="Control/HBoxContainer/PantryButton" to="PantryMenuNode/Pantry Menu" method="_on_pantry_button_become_visible"]
